@@ -1,0 +1,188 @@
+/* === Main header and nav layout - FLOATING === */
+.site-header {
+  background-color: transparent; /* Remove the white background */
+  position: absolute; /* Take it out of the normal document flow */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; /* Ensure it sits on top of all other content */
+  padding: 20px 40px; /* Add spacing from the edges */
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* === The pill container for navigation links - FROSTED GLASS === */
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  /* Create a semi-transparent "frosted glass" effect */
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+  padding: 8px;
+  border-radius: 999px;
+  position: relative;
+  /* Make the border more subtle */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* The moving highlight effect */
+.nav-highlight {
+  position: absolute;
+  top: 8px;
+  height: calc(100% - 16px);
+  /* Style the active link pill - better contrast */
+  background-color: #DD8698; /* A slightly more saturated pink for contrast */
+  border-radius: 999px;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 2px 10px rgba(221, 134, 152, 0.4);
+  opacity: 0;
+}
+
+.nav-highlight.visible {
+  opacity: 1;
+}
+
+.nav-links li {
+  position: relative;
+  z-index: 2;
+}
+
+/* === Dropdown Navigation === */
+.nav-item-with-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 200px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  animation: dropdownFadeIn 0.3s ease-out;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.dropdown-item {
+  color: #5C474B;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(221, 134, 152, 0.2);
+  color: #DD8698;
+}
+
+.nav-link {
+  /* Style the text for inactive links - better contrast */
+  color: #5C474B; /* A darker, muted pink/brown for much better contrast */
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 999px;
+  position: relative;
+  z-index: 2;
+  transition: color 0.4s ease;
+  font-weight: 500;
+  font-size: 15px;
+  display: block;
+  white-space: nowrap;
+}
+
+/* Active link style */
+.nav-link.active {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* Hover text color */
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* === Logo on the right === */
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 15px 20px;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 6px;
+  }
+
+  .nav-link {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .logo-image {
+    height: 36px;
+  }
+
+  .dropdown-menu {
+    min-width: 180px;
+    font-size: 13px;
+  }
+
+  .dropdown-item {
+    padding: 8px 15px;
+    font-size: 13px;
+  }
+}
