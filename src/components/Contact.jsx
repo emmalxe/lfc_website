@@ -66,6 +66,11 @@ const Contact = () => {
                   #02-262 Gek Poh Shopping Centre<br/>
                   Singapore 640762
                 </span>
+                <div className="relocated-notice">
+                  We have temporarily relocated, <br/>
+                  Refer to <a href="#location-updates" className="location-link">Location Updates</a> for more information
+                  
+                </div>
               </div>
             </div>
 
@@ -124,23 +129,36 @@ const Contact = () => {
 
         <div className="location-section" id="location-updates">
           <h3 className="location-title">Location Updates</h3>
-          <div className="map-container">
-            <div className="map-content">
-              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#6b8e9d" strokeWidth="1.5" className="location-icon">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" strokeLinecap="round" strokeLinejoin="round"/>
-                <circle cx="12" cy="10" r="3" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <p>Block 762 Jurong West Street 75 #02-262</p>
-              <p>Gek Poh Shopping Centre</p>
-              <p>Singapore 640762</p>
-              <a 
-                href="https://www.google.com/maps/search/?api=1&query=Block+762+Jurong+West+Street+75+Gek+Poh+Shopping+Centre+Singapore" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="maps-button"
+          
+          {/* Top: Blue Info Card */}
+          <div className="location-info-card">
+            <p className="location-info-text">
+              By 1st September 2025, our clinic will be relocated to a Pink Container along the main road of Jurong West Avenue 5 due to Gek Poh Shopping Centre upgrading.
+            </p>
+          </div>
+
+          {/* Bottom: Video and Image Grid */}
+          <div className="location-media-grid">
+            {/* Left: Portrait Video */}
+            <div className="location-video-container">
+              <video 
+                className="location-video"
+                controls
+                muted
               >
-                Open in Google Maps
-              </a>
+                <source src="/references/directions.MOV" type="video/quicktime" />
+                <source src="/references/directions.MOV" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+
+            {/* Right: Container Image */}
+            <div className="location-image-container">
+              <img 
+                src="/references/container.jpg" 
+                alt="Pink Container Clinic" 
+                className="location-image"
+              />
             </div>
           </div>
         </div>

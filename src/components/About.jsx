@@ -1,5 +1,5 @@
 import React from 'react';
-import RollingGallery from './RollingGallery';
+import ThreeDPhotoCarouselDemo from './ThreeDPhotoCarouselDemo';
 import AnimatedSection from './AnimatedSection';
 import './About.css';
 
@@ -11,6 +11,11 @@ const About = () => {
       <AnimatedSection animation="fade-up" delay={100}>
         <section className="section">
           <h2 className="section-header">In The Beginning</h2>
+          <img 
+            src="/references/We care for all template drawing new mural 3.jpeg" 
+            alt="Mural artwork" 
+            className="beginning-image"
+          />
         <div className="about-content">
           <p className="about-text" style={{ textAlign: 'left' }}>
             It was a cold rainy evening sometime in February 2002, a pregnant woman and her lady colleague carried boxes of stationeries from the car park to the clinic, and then tenderly wiped off the dust on the newly installed furniture. While surveying their yet unfamiliar environment with much anticipation and excitement, a kindhearted middle-aged lady walked in and asked whether they needed to employ a cleaner, and they gladly accepted her proposal. They were the earliest staff of the clinic: Shirley Lee the resident doctor, Kartina the clinic manager, and Mdm Lim the clinic hygiene officer.
@@ -25,7 +30,7 @@ const About = () => {
       <AnimatedSection animation="fade-up" delay={200}>
         <section className="section">
         <h2 className="section-header">It's the journey that matters...</h2>
-        <RollingGallery speed={35} />
+        <ThreeDPhotoCarouselDemo />
 
         <div className="about-content">
           <p className="about-text">
