@@ -48,7 +48,7 @@ const Contact = () => {
               </div>
               <div>
                 <strong className="contact-label">Email</strong>
-                <a href="mailto:info@leefamilyclinic.com.sg" className="contact-link">info@leefamilyclinic.com.sg</a>
+                <a href="mailto:leefamilyclinic@gmail.com" className="contact-link">leefamilyclinic@gmail.com</a>
               </div>
             </div>
 

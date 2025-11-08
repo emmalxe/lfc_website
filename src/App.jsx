@@ -32,7 +32,7 @@ function App() {
       </main>
       <footer>
         <p>&copy; 2025 Lee Family Clinic Pte Ltd. All rights reserved.</p>
-        <p>Your Family's Health, Our Priority</p>
+        <p>Big or Small, We Care for All!</p>
       </footer>
     </div>
   );
