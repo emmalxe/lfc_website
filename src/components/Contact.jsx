@@ -29,19 +29,6 @@ const Contact = () => {
             <div className="contact-detail">
               <div className="contact-icon">
                 <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <rect x="6" y="14" width="12" height="8" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </div>
-              <div>
-                <strong className="contact-label">Fax</strong>
-                <a href="tel:+6567958830" className="contact-link">+65 6795 8830</a>
-              </div>
-            </div>
-
-            <div className="contact-detail">
-              <div className="contact-icon">
-                <svg viewBox="0 0 24 24" fill="none">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" strokeLinecap="round" strokeLinejoin="round"/>
                   <polyline points="22,6 12,13 2,6" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>

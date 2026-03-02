@@ -4,30 +4,22 @@ import './Services.css';
 
 const Services = () => {
   const vaccinationPackages1 = [
-    { name: 'Boostrix', price: '$41' },
-    { name: 'Cervarix', price: '$161' },
-    { name: 'Chickenpox', price: '$80' },
-    { name: 'Gardasil', price: '$161' },
-    { name: 'Hepatitis A (Adult)', price: '$108' },
-    { name: 'Hepatitis A (Child)', price: '$57' },
-    { name: 'Hepatitis B (Adult)', price: '$50' },
-    { name: 'Hepatitis B (Child)', price: '$28' },
-    { name: 'Hexa (6 In 1)', price: '$120' },
-    { name: 'Infanrix (5 In 1)', price: '$97' },
-    { name: 'Influenza', price: '$30' },
-    { name: 'MMR', price: '$37' }
+    { name: 'Boostrix', price: '$60' },
+    { name: 'Cervarix', price: '$98.10' },
+    { name: 'Chickenpox', price: '$70' },
+    { name: 'Gardasil 9', price: '$270' },
+    { name: 'Hepatitis A (Child)', price: '$60' },
+    { name: 'Hepatitis A (Adult)', price: '$110' },
+    { name: 'Hepatitis B (Adult)', price: '$52' },
   ];
 
   const vaccinationPackages2 = [
-    { name: 'MMRV', price: '$120' },
-    { name: 'Oral Polio Vaccine', price: '$21' },
-    { name: 'Pneumo 13 (Child)', price: '$170' },
-    { name: 'Pneumo 23 (Adult)', price: '$89' },
-    { name: 'Rotarix (Oral Vaccine)', price: '$107', note: 'need 2 doses > 3 & 5 mths' },
-    { name: 'Rotateq (Oral Vaccine)', price: '$75', note: 'need 3 doses > 15 & 30wks' },
-    { name: 'Tetavax', price: '$15' },
-    { name: 'Twinrix (Hep A & B)', price: '$96' },
-    { name: 'Typhoid', price: '$28' }
+    { name: 'Influenza', price: '$50' },
+    { name: 'MMR', price: '$50' },
+    { name: 'Prevenar 20 (Adult > 50 yrs old)', price: '$147.15' },
+    { name: 'Tetanus', price: '$50' },
+    { name: 'Twinrix (Hepatitis A + B)', price: '$130' },
+    { name: 'Typhoid', price: '$50' },
   ];
 
   return (
@@ -252,6 +244,8 @@ const Services = () => {
                 <li>Hepatitis A and B Screen 肝炎检查</li>
                 <li>Thyroid Screen 甲状腺检查</li>
                 <li>Liver Tumour Marker 肝癌蛋白</li>
+                <li>Colon Tumour Marker (CEA)</li>
+                <li>Linear Tumour Marker (AFP)</li>
                 <li>Stool Occult Blood 粪隐血</li>
               </ul>
             </div>
@@ -275,6 +269,8 @@ const Services = () => {
                 <li>Hepatitis A and B Screen 肝炎检查</li>
                 <li>Thyroid Screen 甲状腺检查</li>
                 <li>Liver Tumour Marker 肝癌蛋白</li>
+                <li>Colon Tumour Marker (CEA)</li>
+                <li>Linear Tumour Marker (AFP)</li>
                 <li>CA125 (Female) 卵巢癌抗原</li>
                 <li>PSA (Male) 前列腺特异抗原</li>
                 <li>Stool Occult Blood 粪隐血</li>
