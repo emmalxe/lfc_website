@@ -4,11 +4,11 @@ import './Navbar.css';
 const Navbar = ({ activeTab, setActiveTab }) => {
   const [highlightStyle, setHighlightStyle] = useState({});
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navLinksRef = useRef([]);
   const containerRef = useRef(null);
   const closeTimeoutRef = useRef(null);
 
-  // Navigation menu configuration with dropdown items
   const navMenu = [
     {
       id: 'home',
@@ -47,16 +47,14 @@ const Navbar = ({ activeTab, setActiveTab }) => {
   const handleNavClick = (page) => {
     setActiveTab(page);
     setOpenDropdown(null);
-    // Clear any pending close timeout
+    setMobileMenuOpen(false);
     if (closeTimeoutRef.current) {
       clearTimeout(closeTimeoutRef.current);
       closeTimeoutRef.current = null;
     }
   };
 
-  // Handle opening dropdown with timeout clearing
   const handleDropdownOpen = (itemId, index) => {
-    // Clear any pending close timeout
     if (closeTimeoutRef.current) {
       clearTimeout(closeTimeoutRef.current);
       closeTimeoutRef.current = null;
@@ -65,82 +63,78 @@ const Navbar = ({ activeTab, setActiveTab }) => {
     setOpenDropdown(itemId);
   };
 
-  // Handle closing dropdown with delay
   const handleDropdownClose = () => {
     closeTimeoutRef.current = setTimeout(() => {
       setOpenDropdown(null);
-    }, 200); // 200ms delay before closing
+    }, 200);
   };
 
-  // Scroll to section utility function
   const scrollToSection = (sectionId) => {
     setTimeout(() => {
       const element = document.getElementById(sectionId);
       if (element) {
-        const navbarHeight = 100; // Account for floating navbar
+        const navbarHeight = 100;
         const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
         const offsetPosition = elementPosition - navbarHeight;
-        
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
       }
-    }, 100); // Wait for page render
+    }, 100);
   };
 
-  // Handle dropdown item click
   const handleDropdownItemClick = (page, section) => {
     setActiveTab(page);
     setOpenDropdown(null);
+    setMobileMenuOpen(false);
     scrollToSection(section);
   };
 
-  // Cleanup timeout on unmount
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (mobileMenuOpen && !e.target.closest('.site-header')) {
+        setMobileMenuOpen(false);
+      }
+    };
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [mobileMenuOpen]);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileMenuOpen]);
+
   useEffect(() => {
     return () => {
-      if (closeTimeoutRef.current) {
-        clearTimeout(closeTimeoutRef.current);
-      }
+      if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
     };
   }, []);
 
-  // Update highlight position based on active tab
   useEffect(() => {
     const updateHighlightPosition = () => {
       const activeIndex = ['home', 'about', 'services', 'contact'].indexOf(activeTab);
       const activeElement = navLinksRef.current[activeIndex];
-      
       if (activeElement && containerRef.current) {
         const containerRect = containerRef.current.getBoundingClientRect();
         const elementRect = activeElement.getBoundingClientRect();
-        
         setHighlightStyle({
           left: elementRect.left - containerRect.left,
           width: elementRect.width,
         });
       }
     };
-
-    // Initial position update
     updateHighlightPosition();
-
-    // Add window resize listener
     window.addEventListener('resize', updateHighlightPosition);
-    
-    return () => {
-      window.removeEventListener('resize', updateHighlightPosition);
-    };
+    return () => window.removeEventListener('resize', updateHighlightPosition);
   }, [activeTab]);
 
   const handleMouseEnter = (index) => {
     const element = navLinksRef.current[index];
     const container = containerRef.current;
-    
     if (element && container) {
       const containerRect = container.getBoundingClientRect();
       const elementRect = element.getBoundingClientRect();
-      
       setHighlightStyle({
         left: elementRect.left - containerRect.left,
         width: elementRect.width,
@@ -152,11 +146,9 @@ const Navbar = ({ activeTab, setActiveTab }) => {
     const activeIndex = ['home', 'about', 'services', 'contact'].indexOf(activeTab);
     const activeElement = navLinksRef.current[activeIndex];
     const container = containerRef.current;
-    
     if (activeElement && container) {
       const containerRect = container.getBoundingClientRect();
       const elementRect = activeElement.getBoundingClientRect();
-      
       setHighlightStyle({
         left: elementRect.left - containerRect.left,
         width: elementRect.width,
@@ -167,18 +159,18 @@ const Navbar = ({ activeTab, setActiveTab }) => {
   return (
     <header className="site-header">
       <nav className="main-nav">
-        {/* Logo on the left */}
+        {/* Logo */}
         <div className="nav-logo">
           <img src="/references/logo_name_v1.png" alt="Lee Family Clinic" className="logo-image" />
         </div>
 
-        {/* Navigation Links with pill shape */}
-        <ul 
+        {/* Desktop Navigation Links */}
+        <ul
           ref={containerRef}
-          className="nav-links" 
+          className="nav-links"
           onMouseLeave={handleMouseLeave}
         >
-          <div 
+          <div
             className={`nav-highlight ${highlightStyle.left !== undefined ? 'visible' : ''}`}
             style={{
               left: `${highlightStyle.left || 0}px`,
@@ -186,27 +178,24 @@ const Navbar = ({ activeTab, setActiveTab }) => {
             }}
           />
           {navMenu.map((item, index) => (
-            <li 
+            <li
               key={item.id}
               className="nav-item-with-dropdown"
               onMouseEnter={() => handleDropdownOpen(item.id, index)}
               onMouseLeave={handleDropdownClose}
             >
-              <a 
+              <a
                 ref={el => navLinksRef.current[index] = el}
-                href="#" 
-                className={`nav-link ${activeTab === item.id ? 'active' : ''}`} 
+                href="#"
+                className={`nav-link ${activeTab === item.id ? 'active' : ''}`}
                 onClick={(e) => { e.preventDefault(); handleNavClick(item.id); }}
               >
                 {item.label}
               </a>
-              
-              {/* Dropdown Menu */}
               {openDropdown === item.id && (
-                <div 
+                <div
                   className="dropdown-menu"
                   onMouseEnter={() => {
-                    // Clear timeout when mouse enters dropdown
                     if (closeTimeoutRef.current) {
                       clearTimeout(closeTimeoutRef.current);
                       closeTimeoutRef.current = null;
@@ -232,7 +221,51 @@ const Navbar = ({ activeTab, setActiveTab }) => {
             </li>
           ))}
         </ul>
+
+        {/* Hamburger Button (mobile only) */}
+        <button
+          className={`hamburger ${mobileMenuOpen ? 'open' : ''}`}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
+          aria-expanded={mobileMenuOpen}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </nav>
+
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div className="mobile-menu">
+          {navMenu.map((item) => (
+            <div key={item.id} className="mobile-menu-group">
+              <a
+                href="#"
+                className={`mobile-nav-link ${activeTab === item.id ? 'active' : ''}`}
+                onClick={(e) => { e.preventDefault(); handleNavClick(item.id); }}
+              >
+                {item.label}
+              </a>
+              <div className="mobile-dropdown">
+                {item.dropdown.map((dropdownItem, idx) => (
+                  <a
+                    key={idx}
+                    href="#"
+                    className="mobile-dropdown-item"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleDropdownItemClick(dropdownItem.page, dropdownItem.section);
+                    }}
+                  >
+                    {dropdownItem.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </header>
   );
 };

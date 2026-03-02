@@ -72,3 +72,24 @@
     color: #ffb6c1;
     font-weight: 500;
 }
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    .about-text {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .beginning-image {
+        max-width: 100%;
+    }
+
+    .expectations-title {
+        font-size: 19px;
+    }
+
+    .expectations-list li {
+        font-size: 14px;
+        padding: 10px 16px 10px 40px;
+    }
+}

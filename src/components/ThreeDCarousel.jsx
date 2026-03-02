@@ -5,7 +5,7 @@ const ThreeDCarousel = ({ images = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [previousIndex, setPreviousIndex] = useState(0);
   const [direction, setDirection] = useState('right'); // 'left' or 'right'
-  const [isHovered, setIsHovered] = useState(false);
+  const [_isHovered, setIsHovered] = useState(false);
   const containerRef = useRef(null);
 
   // Handle keyboard navigation

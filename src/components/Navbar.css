@@ -1,13 +1,13 @@
 /* === Main header and nav layout - FLOATING === */
 .site-header {
-  background-color: transparent; /* Remove the white background */
-  position: absolute; /* Take it out of the normal document flow */
+  background-color: transparent;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100; /* Ensure it sits on top of all other content */
-  padding: 20px 40px; /* Add spacing from the edges */
-  box-sizing: border-box; /* Ensures padding is included in the width */
+  z-index: 100;
+  padding: 20px 40px;
+  box-sizing: border-box;
 }
 
 .main-nav {
@@ -24,14 +24,12 @@
   display: flex;
   align-items: center;
   list-style: none;
-  /* Create a semi-transparent "frosted glass" effect */
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
+  -webkit-backdrop-filter: blur(10px);
   padding: 8px;
   border-radius: 999px;
   position: relative;
-  /* Make the border more subtle */
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
@@ -40,11 +38,10 @@
   position: absolute;
   top: 8px;
   height: calc(100% - 16px);
-  /* Style the active link pill - better contrast */
-  background-color: #DD8698; /* A slightly more saturated pink for contrast */
+  background-color: #DD8698;
   border-radius: 999px;
   z-index: 1;
-  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: left 0.4s cubic-bezier(0.25, 1, 0.5, 1), width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   box-shadow: 0 2px 10px rgba(221, 134, 152, 0.4);
   opacity: 0;
 }
@@ -80,13 +77,13 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
-  animation: dropdownFadeIn 0.3s ease-out;
+  animation: dropdownFadeIn 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 @keyframes dropdownFadeIn {
   from {
     opacity: 0;
-    transform: translateX(-50%) translateY(-10px);
+    transform: translateX(-50%) translateY(-8px);
   }
   to {
     opacity: 1;
@@ -101,7 +98,7 @@
   border-radius: 12px;
   font-size: 14px;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: background 0.2s ease, color 0.2s ease;
   white-space: nowrap;
   display: block;
 }
@@ -112,32 +109,29 @@
 }
 
 .nav-link {
-  /* Style the text for inactive links - better contrast */
-  color: #5C474B; /* A darker, muted pink/brown for much better contrast */
+  color: #5C474B;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 999px;
   position: relative;
   z-index: 2;
-  transition: color 0.4s ease;
+  transition: color 0.3s ease;
   font-weight: 500;
   font-size: 15px;
   display: block;
   white-space: nowrap;
 }
 
-/* Active link style */
 .nav-link.active {
   color: #ffffff;
   font-weight: 500;
 }
 
-/* Hover text color */
 .nav-link:hover {
   color: #ffffff;
 }
 
-/* === Logo on the right === */
+/* === Logo === */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -150,39 +144,149 @@
   max-width: 100%;
 }
 
-/* === Responsive Design === */
+/* === Hamburger Button (mobile only) === */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #5C474B;
+  border-radius: 2px;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.25s ease;
+  transform-origin: center;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* === Mobile Menu === */
+.mobile-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 22px;
+  padding: 12px;
+  box-shadow: 0 16px 48px rgba(90, 40, 55, 0.14);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  animation: mobileMenuSlide 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 200;
+}
+
+@keyframes mobileMenuSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-menu-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-link {
+  color: #5C474B;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+  display: block;
+}
+
+.mobile-nav-link.active {
+  background: #DD8698;
+  color: white;
+}
+
+.mobile-nav-link:hover:not(.active) {
+  background: rgba(221, 134, 152, 0.12);
+  color: #DD8698;
+}
+
+.mobile-dropdown {
+  display: flex;
+  flex-direction: column;
+  padding-left: 18px;
+  gap: 2px;
+  margin-top: 2px;
+}
+
+.mobile-dropdown-item {
+  color: #888;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 400;
+  transition: background 0.2s ease, color 0.2s ease;
+  display: block;
+}
+
+.mobile-dropdown-item:hover {
+  background: rgba(221, 134, 152, 0.1);
+  color: #DD8698;
+}
+
+/* === Responsive === */
 @media (max-width: 768px) {
   .site-header {
-    padding: 15px 20px;
+    padding: 14px 18px;
   }
 
   .main-nav {
-    flex-direction: column;
-    gap: 20px;
+    gap: 0;
   }
 
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 6px;
+    display: none;
   }
 
-  .nav-link {
-    padding: 8px 15px;
-    font-size: 14px;
+  .hamburger {
+    display: flex;
   }
 
   .logo-image {
-    height: 36px;
-  }
-
-  .dropdown-menu {
-    min-width: 180px;
-    font-size: 13px;
-  }
-
-  .dropdown-item {
-    padding: 8px 15px;
-    font-size: 13px;
+    height: 38px;
   }
 }

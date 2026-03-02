@@ -4,7 +4,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
-    padding: 60px 0 50px 0; /* Reduced padding by half for floating header */
+    padding: 80px 0 50px 0;
     margin-top: 30px;
     position: relative;
 }
@@ -33,7 +33,7 @@
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 25px;
-    animation: fadeUp 0.8s ease-out forwards;
+    animation: fadeUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     opacity: 0;
 }
 
@@ -45,7 +45,7 @@
 }
 
 @keyframes fadeUp {
-    0% { opacity: 0; transform: translateY(40px); }
+    0% { opacity: 0; transform: translateY(32px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
@@ -54,8 +54,8 @@
     color: #6b8e9d;
     margin-bottom: 35px;
     font-weight: 400;
-    animation: fadeUp 0.8s ease-out forwards;
-    animation-delay: 0.2s;
+    animation: fadeUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 0.15s;
     opacity: 0;
 }
 
@@ -63,9 +63,10 @@
     display: flex;
     gap: 15px;
     margin-bottom: 40px;
-    animation: fadeUp 0.8s ease-out forwards;
-    animation-delay: 0.4s;
+    animation: fadeUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 0.3s;
     opacity: 0;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -74,7 +75,9 @@
     text-decoration: none;
     font-weight: 500;
     font-size: 15px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                background 0.3s ease;
     border: none;
     cursor: pointer;
 }
@@ -109,15 +112,15 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    min-height: 500px;
-    animation: float 4s ease-in-out infinite, fadeUp 0.8s ease-out forwards;
-    animation-delay: 0s, 0.6s;
+    min-height: 420px;
+    animation: float 5s ease-in-out infinite, fadeUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 0s, 0.45s;
     opacity: 0;
 }
 
 @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-12px); }
 }
 
 /* Modified: Hero logo at 80% size - freeform without card */
@@ -129,12 +132,57 @@
 }
 
 /* === Responsive Design === */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .hero {
         grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 100px 0 40px 0;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .hero-image {
+        order: -1;
+        min-height: 260px;
+    }
+
+    .hero-logo {
+        width: 55%;
+        max-width: 240px;
     }
 
     .hero-content h1 {
-        font-size: 36px;
+        font-size: 38px;
+    }
+
+    .hero-subheading {
+        font-size: 16px;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 90px 0 30px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-image {
+        min-height: 200px;
+    }
+
+    .hero-logo {
+        width: 65%;
+    }
+
+    .btn {
+        padding: 13px 24px;
+        font-size: 14px;
     }
 }
