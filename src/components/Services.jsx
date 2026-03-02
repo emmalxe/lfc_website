@@ -50,7 +50,7 @@ const Services = () => {
               <li>Chronic medical condition</li>
               <li>Dermatological condition (Skin)</li>
               <li>Geriatric illness (elderly)</li>
-              <li>Paediatric illness (children)</li>
+              <li>Paediatric illness (children over 2 years old)</li>
               <li>Travel medicine</li>
             </ul>
           </div>
@@ -67,12 +67,9 @@ const Services = () => {
             <ul className="service-list">
               <li>Chickenpox</li>
               <li>Diphtheria, Pertussis and Tetanus</li>
-              <li>Haemophilus Influenzae b</li>
               <li>Hepatitis A and B</li>
               <li>Influenza</li>
               <li>Measles, Mumps and Rubella</li>
-              <li>Oral Rotavirus</li>
-              <li>Poliomyelitis</li>
               <li>Pneumococcal</li>
               <li>Travellers</li>
               <li>Typhoid</li>
@@ -88,7 +85,6 @@ const Services = () => {
             <h3>Procedures</h3>
             <ul className="service-list">
               <li>General wound care</li>
-              <li>Wound suturing</li>
             </ul>
           </div>
 
@@ -110,6 +106,7 @@ const Services = () => {
               <li>Pre-marital</li>
               <li>University pre-admission</li>
               <li>Work Permit</li>
+              <li>Healthier SG Screen For Life Screening</li>
             </ul>
           </div>
 
@@ -123,7 +120,7 @@ const Services = () => {
             <h3>Women's Health</h3>
             <ul className="service-list">
               <li>Breast screening (mammogram)</li>
-              <li>Cervix screening (pap smear)</li>
+              <li>Cervix screening (Thin Prep Pap Smear / HPV DNA Screening)</li>
               <li>Family planning (contraception)</li>
               <li>Gynaecological problems</li>
               <li>Menopause</li>
@@ -141,7 +138,6 @@ const Services = () => {
             <h3>Health Screening</h3>
             <ul className="service-list">
               <li>Cholesterol</li>
-              <li>Development assessment</li>
               <li>Diabetic mellitus</li>
               <li>General health screening</li>
               <li>Hepatitis A and B</li>

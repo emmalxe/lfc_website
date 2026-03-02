@@ -3,7 +3,6 @@
 
 export const getJourneyImages = () => {
   const imageFiles = [
-  "PHOTO-2025-10-04-13-01-55 2.jpg",
   "PHOTO-2025-10-13-22-50-33.jpg",
   "PHOTO-2025-10-13-22-50-35.jpg",
   "PHOTO-2025-10-13-22-54-46.jpg",
@@ -17,5 +16,5 @@ export const getJourneyImages = () => {
 };
 
 export const getImageCount = () => {
-  return 5;
+  return 4;
 };
