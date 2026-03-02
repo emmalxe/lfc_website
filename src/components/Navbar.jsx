@@ -161,7 +161,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
       <nav className="main-nav">
         {/* Logo */}
         <div className="nav-logo">
-          <img src="/references/logo_name_v1.png" alt="Lee Family Clinic" className="logo-image" />
+          <img src={`${import.meta.env.BASE_URL}references/logo_name_v1.png`} alt="Lee Family Clinic" className="logo-image" />
         </div>
 
         {/* Desktop Navigation Links */}

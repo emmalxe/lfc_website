@@ -10,8 +10,9 @@ export const getJourneyImages = () => {
   "PHOTO-2025-10-13-22-54-47.jpg"
 ];
   
+  const base = import.meta.env.BASE_URL;
   return imageFiles.map(filename => 
-    `/references/journey pictures/${filename}`
+    `${base}references/journey pictures/${filename}`
   );
 };
 

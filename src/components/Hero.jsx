@@ -23,7 +23,7 @@ const Hero = ({ setActiveTab }) => {
         </div>
       </div>
       <div className="hero-image">
-        <img src="/references/logo_upscaled.svg" alt="Lee Family Clinic" className="hero-logo" />
+        <img src={`${import.meta.env.BASE_URL}references/logo_upscaled.svg`} alt="Lee Family Clinic" className="hero-logo" />
       </div>
     </section>
   );

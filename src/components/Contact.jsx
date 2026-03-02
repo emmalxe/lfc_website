@@ -146,8 +146,8 @@ const Contact = () => {
                 controls
                 muted
               >
-                <source src="/references/directions.MOV" type="video/quicktime" />
-                <source src="/references/directions.MOV" type="video/mp4" />
+                <source src={`${import.meta.env.BASE_URL}references/directions.MOV`} type="video/quicktime" />
+                <source src={`${import.meta.env.BASE_URL}references/directions.MOV`} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -155,7 +155,7 @@ const Contact = () => {
             {/* Right: Container Image */}
             <div className="location-image-container">
               <img 
-                src="/references/container.jpg" 
+                src={`${import.meta.env.BASE_URL}references/container.jpg`}
                 alt="Pink Container Clinic" 
                 className="location-image"
               />

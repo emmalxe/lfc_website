@@ -12,7 +12,7 @@ const About = () => {
         <section className="section">
           <h2 className="section-header">In The Beginning</h2>
           <img 
-            src="/references/We care for all template drawing new mural 3.jpeg" 
+            src={`${import.meta.env.BASE_URL}references/We care for all template drawing new mural 3.jpeg`}
             alt="Mural artwork" 
             className="beginning-image"
           />
