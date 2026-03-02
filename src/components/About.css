@@ -16,7 +16,7 @@
 
 .about-text {
     font-size: 16px;
-    color: #888;
+    color: #6e5b60;
     line-height: 1.9;
     text-align: center;
     max-width: 900px;
@@ -43,7 +43,7 @@
 }
 
 .expectations-intro {
-    color: #888;
+    color: #6e5b60;
     font-size: 15px;
     margin-bottom: 20px;
     font-style: italic;
@@ -59,7 +59,7 @@
     margin: 8px 0;
     background: linear-gradient(135deg, #fff9fb 0%, #fff5f8 100%);
     border-radius: 12px;
-    color: #666;
+    color: #5C474B;
     font-size: 15px;
     position: relative;
     padding-left: 45px;
