@@ -3,6 +3,7 @@
 
 export const getJourneyImages = () => {
   const imageFiles = [
+  "old_clinic_photo.jpg",
   "PHOTO-2025-10-13-22-50-33.jpg",
   "PHOTO-2025-10-13-22-50-35.jpg",
   "PHOTO-2025-10-13-22-54-46.jpg",
@@ -16,5 +17,5 @@ export const getJourneyImages = () => {
 };
 
 export const getImageCount = () => {
-  return 4;
+  return 5;
 };
