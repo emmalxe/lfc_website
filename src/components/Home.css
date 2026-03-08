@@ -143,8 +143,8 @@
 
 .telephone-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 45px rgba(255, 182, 193, 0.15);
-    border-color: #ffb6c1;
+    box-shadow: 0 15px 45px rgba(241, 176, 185, 0.15);
+    border-color: #f1b0b9;
 }
 
 .telephone-card .card-title {
@@ -165,6 +165,12 @@
     font-weight: 400;
     color: #6b8e9d;
     letter-spacing: 2px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.phone-placeholder:hover {
+    color: #f1b0b9;
 }
 
 /* === Operating Hours Card (Full Width) === */
@@ -183,8 +189,8 @@
 
 .operating-hours-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 45px rgba(255, 182, 193, 0.15);
-    border-color: #ffb6c1;
+    box-shadow: 0 15px 45px rgba(241, 176, 185, 0.15);
+    border-color: #f1b0b9;
 }
 
 .operating-hours-card .card-title {

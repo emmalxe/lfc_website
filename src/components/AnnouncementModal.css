@@ -44,7 +44,7 @@
 
 /* === Header === */
 .announcement-header {
-  background: linear-gradient(135deg, #FFB6C1 0%, #e8a0b0 100%);
+  background: #f1b0b9;
   padding: 28px 28px 24px;
   display: flex;
   align-items: center;
@@ -148,7 +148,7 @@
 .announcement-checkbox-custom {
   width: 20px;
   height: 20px;
-  border: 2px solid #ffb6c1;
+  border: 2px solid #f1b0b9;
   border-radius: 6px;
   background: white;
   display: flex;
@@ -159,8 +159,8 @@
 }
 
 .announcement-checkbox:checked + .announcement-checkbox-custom {
-  background: #ffb6c1;
-  border-color: #ffb6c1;
+  background: #f1b0b9;
+  border-color: #f1b0b9;
 }
 
 .announcement-checkbox:checked + .announcement-checkbox-custom::after {
@@ -178,7 +178,7 @@
 
 /* Got It Button */
 .announcement-btn {
-  background: linear-gradient(135deg, #FFB6C1 0%, #e8a0b0 100%);
+  background: #f1b0b9;
   color: white;
   border: none;
   padding: 12px 28px;

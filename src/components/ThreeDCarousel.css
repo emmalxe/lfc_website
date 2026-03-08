@@ -94,11 +94,11 @@
 }
 
 .carousel-nav:hover {
-  background: rgba(255, 182, 193, 0.9);
+  background: rgba(241, 176, 185, 0.9);
   color: white;
-  border-color: #ffb6c1;
+  border-color: #f1b0b9;
   transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(255, 182, 193, 0.4);
+  box-shadow: 0 6px 20px rgba(241, 176, 185, 0.4);
 }
 
 /* Dots */
@@ -121,14 +121,14 @@
 }
 
 .dot:hover {
-  border-color: #ffb6c1;
+  border-color: #f1b0b9;
   transform: scale(1.2);
 }
 
 .dot.active {
-  background: #ffb6c1;
-  border-color: #ffb6c1;
-  box-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
+  background: #f1b0b9;
+  border-color: #f1b0b9;
+  box-shadow: 0 0 10px rgba(241, 176, 185, 0.6);
 }
 
 /* Counter */

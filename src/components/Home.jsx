@@ -45,7 +45,7 @@ const Home = ({ setActiveTab }) => {
             <div className="telephone-card">
               <h2 className="card-title">Telephone Enquiries</h2>
               <div className="phone-number">
-                <span className="phone-placeholder">+65 6794 0217</span>
+                <a href="tel:+6567940217" className="phone-placeholder">+65 6794 0217</a>
               </div>
             </div>
           </AnimatedSection>

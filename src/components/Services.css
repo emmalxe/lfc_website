@@ -24,7 +24,7 @@
 .service-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 45px rgba(255, 182, 193, 0.15);
-    border-color: #ffb6c1;
+    border-color: #f1b0b9;
 }
 
 .service-icon {
@@ -73,7 +73,7 @@
     content: '•';
     position: absolute;
     left: 5px;
-    color: #ffb6c1;
+    color: #f1b0b9;
 }
 
 .service-list li:last-child {
@@ -82,7 +82,7 @@
 
 /* === CHAS Banner === */
 .chas-banner {
-    background: linear-gradient(135deg, #ffd9e6 0%, #ffb6c1 100%);
+    background: #f1b0b9;
     color: white;
     padding: 20px;
     border-radius: 15px;

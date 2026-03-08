@@ -27,8 +27,8 @@ const Services = () => {
       <AnimatedSection animation="fade-up" delay={100}>
         <section className="section" id="our-services">
         <h2 className="section-header">Our Services</h2>
-        <p className="section-subtitle">Comprehensive healthcare for all ages</p>
-        
+        <p className="section-subtitle">✓ CHAS / PHPC Approved</p>
+
         <div className="services-grid">
           <div className="service-card">
             <div className="service-icon">
@@ -36,14 +36,14 @@ const Services = () => {
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <h3>Consultation</h3>
+            <h3>Consultation 诊疗</h3>
             <ul className="service-list">
-              <li>Acute medical condition</li>
-              <li>Chronic medical condition</li>
-              <li>Dermatological condition (Skin)</li>
-              <li>Geriatric illness (elderly)</li>
-              <li>Paediatric illness (children over 2 years old)</li>
-              <li>Travel medicine</li>
+              <li>Acute medical condition 急性病症</li>
+              <li>Chronic medical condition 慢性病症</li>
+              <li>Dermatological condition (Skin) 皮肤科 (皮肤)</li>
+              <li>Geriatric illness (elderly) 老年疾病 (老人)</li>
+              <li>Paediatric illness (children over 2 years old) 儿科疾病 (两岁以上儿童)</li>
+              <li>Travel medicine 旅游医疗</li>
             </ul>
           </div>
 
@@ -55,16 +55,16 @@ const Services = () => {
                 <circle cx="12" cy="16" r="1" fill="#6b8e9d"/>
               </svg>
             </div>
-            <h3>Immunisation</h3>
+            <h3>Immunisation 免疫接种</h3>
             <ul className="service-list">
-              <li>Chickenpox</li>
-              <li>Diphtheria, Pertussis and Tetanus</li>
-              <li>Hepatitis A and B</li>
-              <li>Influenza</li>
-              <li>Measles, Mumps and Rubella</li>
-              <li>Pneumococcal</li>
-              <li>Travellers</li>
-              <li>Typhoid</li>
+              <li>Chickenpox 水痘</li>
+              <li>Diphtheria, Pertussis and Tetanus 白喉、百日咳及破伤风</li>
+              <li>Hepatitis A and B 甲型及乙型肝炎</li>
+              <li>Influenza 流感</li>
+              <li>Measles, Mumps and Rubella 麻疹、腮腺炎及风疹</li>
+              <li>Pneumococcal 肺炎球菌</li>
+              <li>Travellers 旅游预防接种</li>
+              <li>Typhoid 伤寒</li>
             </ul>
           </div>
 
@@ -74,9 +74,9 @@ const Services = () => {
                 <path d="M12 20v-6M6 20V10M18 20V4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <h3>Procedures</h3>
+            <h3>Procedures 医疗程序</h3>
             <ul className="service-list">
-              <li>General wound care</li>
+              <li>General wound care 一般伤口护理</li>
             </ul>
           </div>
 
@@ -87,18 +87,18 @@ const Services = () => {
                 <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <h3>Check Up</h3>
+            <h3>Check Up 体检</h3>
             <ul className="service-list">
-              <li>Adoption</li>
-              <li>Domestic helper</li>
-              <li>Driving licence</li>
-              <li>Food handler</li>
-              <li>Outward bound</li>
-              <li>Pre-employment</li>
-              <li>Pre-marital</li>
-              <li>University pre-admission</li>
-              <li>Work Permit</li>
-              <li>Healthier SG Screen For Life Screening</li>
+              <li>Adoption 领养体检</li>
+              <li>Domestic helper 女佣体检</li>
+              <li>Driving licence 驾驶执照体检</li>
+              <li>Food handler 食品从业者体检</li>
+              <li>Outward bound 探险活动体检</li>
+              <li>Pre-employment 职前体检</li>
+              <li>Pre-marital 婚前体检</li>
+              <li>University pre-admission 大学入学体检</li>
+              <li>Work Permit 工作准证体检</li>
+              <li>Healthier SG Screen For Life Screening 健康新加坡终身筛查</li>
             </ul>
           </div>
 
@@ -109,14 +109,14 @@ const Services = () => {
                 <circle cx="12" cy="7" r="4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <h3>Women's Health</h3>
+            <h3>Women's Health 女性健康</h3>
             <ul className="service-list">
-              <li>Breast screening (mammogram)</li>
-              <li>Cervix screening (Thin Prep Pap Smear / HPV DNA Screening)</li>
-              <li>Family planning (contraception)</li>
-              <li>Gynaecological problems</li>
-              <li>Menopause</li>
-              <li>Osteoporosis</li>
+              <li>Breast screening (mammogram) 乳房检查 (乳房X光)</li>
+              <li>Cervix screening (Thin Prep Pap Smear / HPV DNA Screening) 子宫颈检查 (液基薄层细胞检测 / HPV DNA筛查)</li>
+              <li>Family planning (contraception) 家庭计划 (避孕)</li>
+              <li>Gynaecological problems 妇科问题</li>
+              <li>Menopause 更年期</li>
+              <li>Osteoporosis 骨质疏松症</li>
             </ul>
           </div>
 
@@ -127,22 +127,18 @@ const Services = () => {
                 <path d="m21 21-4.35-4.35" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <h3>Health Screening</h3>
+            <h3>Health Screening 健康筛查</h3>
             <ul className="service-list">
-              <li>Cholesterol</li>
-              <li>Diabetic mellitus</li>
-              <li>General health screening</li>
-              <li>Hepatitis A and B</li>
-              <li>Hypertension</li>
-              <li>STD</li>
-              <li>Thyroid function</li>
-              <li>Weight management</li>
+              <li>Cholesterol 胆固醇</li>
+              <li>Diabetic mellitus 糖尿病</li>
+              <li>General health screening 一般健康检查</li>
+              <li>Hepatitis A and B 甲型及乙型肝炎</li>
+              <li>Hypertension 高血压</li>
+              <li>STD 性传播疾病</li>
+              <li>Thyroid function 甲状腺功能</li>
+              <li>Weight management 体重管理</li>
             </ul>
           </div>
-        </div>
-
-        <div className="chas-banner">
-          ✓ We are CHAS/PHPC approved
         </div>
         </section>
       </AnimatedSection>
@@ -150,7 +146,6 @@ const Services = () => {
       <AnimatedSection animation="fade-up" delay={200}>
         <section className="section" id="vaccination-packages">
         <h2 className="section-header">Vaccination Packages</h2>
-        <p className="section-subtitle">W.E.F. 1 May 2014</p>
 
         <div className="packages-grid">
           <div className="package-table">
@@ -203,7 +198,6 @@ const Services = () => {
       <AnimatedSection animation="fade-up" delay={300}>
         <section className="section" id="health-screening">
           <h2 className="section-header">Health Screening Packages</h2>
-          <p className="section-subtitle">Comprehensive health screening options</p>
           
           <div className="screening-packages-grid">
             {/* Basic Package Card */}

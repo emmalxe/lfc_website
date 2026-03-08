@@ -43,7 +43,7 @@
     color: #6b8e9d;
     margin-bottom: 20px;
     padding-left: 20px;
-    border-left: 4px solid #ffb6c1;
+    border-left: 4px solid #f1b0b9;
 }
 
 .expectations-intro {
@@ -75,7 +75,7 @@
     content: '•';
     position: absolute;
     left: 20px;
-    color: #ffb6c1;
+    color: #f1b0b9;
     font-weight: 500;
 }
 
