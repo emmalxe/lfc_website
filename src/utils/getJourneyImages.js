@@ -3,12 +3,13 @@
 
 export const getJourneyImages = () => {
   const imageFiles = [
-  "old_clinic_photo.jpg",
-  "PHOTO-2025-10-13-22-50-33.jpg",
-  "PHOTO-2025-10-13-22-50-35.jpg",
-  "PHOTO-2025-10-13-22-54-46.jpg",
-  "PHOTO-2025-10-13-22-54-47.jpg"
-];
+    "We care for all template drawing new mural 3.jpeg",
+    "old_clinic_photo.jpg",
+    "PHOTO-2025-10-13-22-50-33.jpg",
+    "PHOTO-2025-10-13-22-50-35.jpg",
+    "PHOTO-2025-10-13-22-54-47.jpg",
+    "new_container.jpeg"
+  ];
   
   const base = import.meta.env.BASE_URL;
   return imageFiles.map(filename => 
@@ -17,5 +18,5 @@ export const getJourneyImages = () => {
 };
 
 export const getImageCount = () => {
-  return 5;
+  return 6;
 };

@@ -116,19 +116,16 @@ const Contact = () => {
 
         <div className="location-section" id="location-updates">
           <h3 className="location-title">Location Updates</h3>
-          
-          {/* Top: Blue Info Card */}
+
           <div className="location-info-card">
             <p className="location-info-text">
               By 1st September 2025, our clinic will be relocated to a Pink Container along the main road of Jurong West Avenue 5 due to Gek Poh Shopping Centre upgrading.
             </p>
           </div>
 
-          {/* Bottom: Video and Image Grid */}
           <div className="location-media-grid">
-            {/* Left: Portrait Video */}
             <div className="location-video-container">
-              <video 
+              <video
                 className="location-video"
                 controls
                 muted
@@ -139,11 +136,10 @@ const Contact = () => {
               </video>
             </div>
 
-            {/* Right: Container Image */}
             <div className="location-image-container">
-              <img 
-                src={`${import.meta.env.BASE_URL}references/container.jpg`}
-                alt="Pink Container Clinic" 
+              <img
+                src={`${import.meta.env.BASE_URL}references/container3.jpeg`}
+                alt="Pink Container Clinic"
                 className="location-image"
               />
             </div>

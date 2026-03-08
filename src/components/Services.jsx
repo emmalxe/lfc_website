@@ -244,8 +244,8 @@ const Services = () => {
                 <li>Hepatitis A and B Screen 肝炎检查</li>
                 <li>Thyroid Screen 甲状腺检查</li>
                 <li>Liver Tumour Marker 肝癌蛋白</li>
-                <li>Colon Tumour Marker (CEA)</li>
-                <li>Linear Tumour Marker (AFP)</li>
+                <li>Colon Tumour Marker (CEA) 结肠癌蛋白</li>
+                <li>Linear Tumour Marker (AFP) 胎儿蛋白</li>
                 <li>Stool Occult Blood 粪隐血</li>
               </ul>
             </div>
@@ -269,8 +269,8 @@ const Services = () => {
                 <li>Hepatitis A and B Screen 肝炎检查</li>
                 <li>Thyroid Screen 甲状腺检查</li>
                 <li>Liver Tumour Marker 肝癌蛋白</li>
-                <li>Colon Tumour Marker (CEA)</li>
-                <li>Linear Tumour Marker (AFP)</li>
+                <li>Colon Tumour Marker (CEA) 结肠癌蛋白</li>
+                <li>Linear Tumour Marker (AFP) 胎儿蛋白</li>
                 <li>CA125 (Female) 卵巢癌抗原</li>
                 <li>PSA (Male) 前列腺特异抗原</li>
                 <li>Stool Occult Blood 粪隐血</li>

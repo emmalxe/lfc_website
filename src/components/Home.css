@@ -10,62 +10,114 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 30px;
+    align-items: stretch;
 }
 
-/* === Important Notice Card (Pink) === */
-.important-notice-card {
-    background: #FFB6C1;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.3);
-    color: white;
-    min-height: 260px;
+/* Make AnimatedSection wrappers fill the grid cell so cards can match height */
+.top-cards > .animated-section {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+}
+
+/* === Important Notice Card — matches announcement modal === */
+.important-notice-card {
+    background: #ffffff;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow:
+        0 24px 60px rgba(90, 40, 55, 0.14),
+        0 8px 20px rgba(255, 182, 193, 0.2);
     transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                border-color 0.35s ease;
-    border: 2px solid rgba(255, 255, 255, 0.1);
+                box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .important-notice-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 45px rgba(255, 182, 193, 0.4);
-    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-6px);
+    box-shadow:
+        0 32px 70px rgba(90, 40, 55, 0.18),
+        0 12px 28px rgba(255, 182, 193, 0.28);
 }
 
-.important-notice-card .card-title {
-    font-size: 28px;
+/* Solid pink header */
+.notice-card-header {
+    background: #f1b0b9;
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.notice-card-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.notice-card-icon svg {
+    width: 22px;
+    height: 22px;
+    stroke: white;
+}
+
+.notice-card-title {
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 20px;
     color: white;
+    letter-spacing: 0.01em;
+}
+
+/* White body */
+.notice-card-body {
+    padding: 22px 28px 16px;
+    flex: 1;
 }
 
 .notice-text {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 25px;
-    color: white;
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: #555;
+}
+
+.notice-text strong {
+    color: #c06070;
+    font-weight: 600;
+}
+
+/* Footer with button */
+.notice-card-footer {
+    padding: 0 28px 24px;
 }
 
 .more-info-btn {
-    background: rgba(255, 255, 255, 0.2);
+    background: #f1b0b9;
     color: white;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    padding: 12px 24px;
+    border: none;
+    padding: 12px 28px;
     border-radius: 25px;
-    font-size: 14px;
+    font-size: 14.5px;
     font-weight: 500;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
-    align-self: flex-start;
-    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+    transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    white-space: nowrap;
 }
 
 .more-info-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.5);
     transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 182, 193, 0.55);
+}
+
+.more-info-btn:active {
+    transform: translateY(0);
 }
 
 /* === Telephone Enquiries Card === */
@@ -75,14 +127,15 @@
     -webkit-backdrop-filter: blur(12px);
     border: 2px solid rgba(255, 255, 255, 0.4);
     padding: 40px;
-    border-radius: 20px;
+    border-radius: 28px;
     box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 260px;
+    width: 100%;
+    height: 100%;
     transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
                 box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
                 border-color 0.35s ease;
@@ -182,16 +235,17 @@
 }
 
 .time-slot strong {
-    color: #6e5b60;
-    font-size: 13px;
+    color: #3d2e31;
+    font-size: 13.5px;
+    font-weight: 600;
     display: block;
     margin-bottom: 5px;
 }
 
 .time-slot p {
-    color: #6b8e9d;
+    color: #3d2e31;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 15.5px;
 }
 
 /* === Responsive Design === */
@@ -206,15 +260,26 @@
         margin: 24px 0;
     }
 
-    .important-notice-card,
+    .notice-card-header {
+        padding: 18px 20px;
+    }
+
+    .notice-card-body {
+        padding: 18px 20px 12px;
+    }
+
+    .notice-card-footer {
+        padding: 0 20px 20px;
+    }
+
+    .more-info-btn {
+        width: 100%;
+        text-align: center;
+    }
+
     .telephone-card,
     .operating-hours-card {
         padding: 28px 22px;
-    }
-
-    .important-notice-card .card-title,
-    .operating-hours-card .card-title {
-        font-size: 22px;
     }
 
     .telephone-card .card-title {

@@ -12,15 +12,15 @@ const About = () => {
         <section className="section">
           <h2 className="section-header">In The Beginning</h2>
           <img 
-            src={`${import.meta.env.BASE_URL}references/We care for all template drawing new mural 3.jpeg`}
-            alt="Mural artwork" 
+            src={`${import.meta.env.BASE_URL}references/in_the_beginning.JPG`}
+            alt="In the beginning" 
             className="beginning-image"
           />
         <div className="about-content">
-          <p className="about-text" style={{ textAlign: 'left' }}>
+          <p className="about-text">
             It was a cold rainy evening sometime in February 2002, a pregnant woman and her lady colleague carried boxes of stationeries from the car park to the clinic, and then tenderly wiped off the dust on the newly installed furniture. While surveying their yet unfamiliar environment with much anticipation and excitement, a kindhearted middle-aged lady walked in and asked whether they needed to employ a cleaner, and they gladly accepted her proposal. They were the earliest staff of the clinic: Shirley Lee the resident doctor, Kartina the clinic manager, and Mdm Lim the clinic hygiene officer.
           </p>
-          <p className="about-text" style={{ textAlign: 'left', marginTop: '20px' }}>
+          <p className="about-text">
             Dr Lee conceived of this clinic at the same time as her daughter, and with the same motherly love, she brought up the clinic with her other business partners. The clinic weathered on despite the economic downturn, the SARS and H1N1 epidemic. Dr Lee eventually acquired the clinic with her family's help and continued to nurture it with the expectations that the clinic will not cease to serve the community where it is situated. Currently, the clinic provides employment to more than 15 full or part time staff.
           </p>
         </div>
