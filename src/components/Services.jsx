@@ -37,7 +37,7 @@ const Services = () => {
                 <path d="M22 12h-4l-3 9L9 3l-3 9H2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <h3>Consultation 诊疗</h3>
+            <h3>Consultation</h3>
             <ul className="service-list">
               <li>Acute medical condition 急性病症</li>
               <li>Chronic medical condition 慢性病症</li>
@@ -56,7 +56,7 @@ const Services = () => {
                 <circle cx="12" cy="16" r="1" fill="#6b8e9d"/>
               </svg>
             </div>
-            <h3>Immunisation 免疫接种</h3>
+            <h3>Immunisation</h3>
             <ul className="service-list">
               <li>Chickenpox 水痘</li>
               <li>Diphtheria, Pertussis and Tetanus 白喉、百日咳及破伤风</li>
@@ -75,7 +75,7 @@ const Services = () => {
                 <path d="M12 20v-6M6 20V10M18 20V4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <h3>Procedures 医疗程序</h3>
+            <h3>Procedures</h3>
             <ul className="service-list">
               <li>General wound care 一般伤口护理</li>
             </ul>
@@ -88,7 +88,7 @@ const Services = () => {
                 <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <h3>Check Up 体检</h3>
+            <h3>Check Up</h3>
             <ul className="service-list">
               <li>Adoption 领养体检</li>
               <li>Domestic helper 女佣体检</li>
@@ -110,7 +110,7 @@ const Services = () => {
                 <circle cx="12" cy="7" r="4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <h3>Women's Health 女性健康</h3>
+            <h3>Women's Health</h3>
             <ul className="service-list">
               <li>Breast screening (mammogram) 乳房检查 (乳房X光)</li>
               <li>Cervix screening (Thin Prep Pap Smear / HPV DNA Screening) 子宫颈检查 (液基薄层细胞检测 / HPV DNA筛查)</li>
@@ -128,7 +128,7 @@ const Services = () => {
                 <path d="m21 21-4.35-4.35" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
-            <h3>Health Screening 健康筛查</h3>
+            <h3>Health Screening</h3>
             <ul className="service-list">
               <li>Cholesterol 胆固醇</li>
               <li>Diabetic mellitus 糖尿病</li>
