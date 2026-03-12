@@ -17,6 +17,7 @@ const Services = () => {
     { name: 'Influenza', price: '$50' },
     { name: 'MMR', price: '$50' },
     { name: 'Prevenar 20 (Adult > 50 yrs old)', price: '$147.15' },
+    { name: 'Shingrix (Shingles)', price: '$300' },
     { name: 'Tetanus', price: '$50' },
     { name: 'Twinrix (Hepatitis A + B)', price: '$130' },
     { name: 'Typhoid', price: '$50' },
@@ -27,7 +28,7 @@ const Services = () => {
       <AnimatedSection animation="fade-up" delay={100}>
         <section className="section" id="our-services">
         <h2 className="section-header">Our Services</h2>
-        <p className="section-subtitle">✓ CHAS / PHPC Approved</p>
+        <p className="section-subtitle">✓ CHAS/PHPC/HEALTHIER SG Clinic</p>
 
         <div className="services-grid">
           <div className="service-card">
@@ -145,14 +146,14 @@ const Services = () => {
 
       <AnimatedSection animation="fade-up" delay={200}>
         <section className="section" id="vaccination-packages">
-        <h2 className="section-header">Vaccination Packages</h2>
+        <h2 className="section-header">Vaccination</h2>
 
         <div className="packages-grid">
           <div className="package-table">
             <table>
               <thead>
                 <tr>
-                  <th>Package</th>
+                  <th>Vaccines</th>
                   <th className="price">Price (with GST)</th>
                 </tr>
               </thead>
@@ -174,7 +175,7 @@ const Services = () => {
             <table>
               <thead>
                 <tr>
-                  <th>Package</th>
+                  <th>Vaccines</th>
                   <th className="price">Price (with GST)</th>
                 </tr>
               </thead>
@@ -237,9 +238,10 @@ const Services = () => {
                 <li>Urine Analysis 尿液检查</li>
                 <li>Hepatitis A and B Screen 肝炎检查</li>
                 <li>Thyroid Screen 甲状腺检查</li>
-                <li>Liver Tumour Marker 肝癌蛋白</li>
+                <li>Liver Tumour Marker (AFP) 肝癌蛋白</li>
                 <li>Colon Tumour Marker (CEA) 结肠癌蛋白</li>
-                <li>Linear Tumour Marker (AFP) 胎儿蛋白</li>
+                <li>Ca125 Ovarian Tumour Marker (Female) 卵巢癌抗原</li>
+                <li>PSA Prostate Tumour Marker (Male) 前列腺特异抗原</li>
                 <li>Stool Occult Blood 粪隐血</li>
               </ul>
             </div>
@@ -262,11 +264,10 @@ const Services = () => {
                 <li>Urine Analysis 尿液检查</li>
                 <li>Hepatitis A and B Screen 肝炎检查</li>
                 <li>Thyroid Screen 甲状腺检查</li>
-                <li>Liver Tumour Marker 肝癌蛋白</li>
+                <li>Liver Tumour Marker (AFP) 肝癌蛋白</li>
                 <li>Colon Tumour Marker (CEA) 结肠癌蛋白</li>
-                <li>Linear Tumour Marker (AFP) 胎儿蛋白</li>
-                <li>CA125 (Female) 卵巢癌抗原</li>
-                <li>PSA (Male) 前列腺特异抗原</li>
+                <li>Ca125 Ovarian Tumour Marker (Female) 卵巢癌抗原</li>
+                <li>PSA Prostate Tumour Marker (Male) 前列腺特异抗原</li>
                 <li>Stool Occult Blood 粪隐血</li>
               </ul>
             </div>
