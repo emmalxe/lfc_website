@@ -6,7 +6,7 @@
   position: relative;
   margin: 40px 0;
   background: linear-gradient(135deg, #fff9fb 0%, #fff5f8 100%);
-  border: 2px solid rgba(255, 182, 193, 0.1);
+  border: 2px solid rgba(244, 162, 172, 0.1);
 }
 
 .gallery-track {
@@ -22,7 +22,7 @@
   height: 100%;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
+  box-shadow: 0 8px 25px rgba(244, 162, 172, 0.2);
   transition: transform 0.3s ease;
 }
 

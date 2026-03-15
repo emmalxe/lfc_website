@@ -15,7 +15,7 @@
     background: linear-gradient(135deg, #fff9fb 0%, #fff5f8 100%);
     padding: 30px;
     border-radius: 20px;
-    border: 1px solid rgba(255, 182, 193, 0.1);
+    border: 1px solid rgba(244, 162, 172, 0.1);
     transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
                 box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
                 border-color 0.35s ease;
@@ -23,8 +23,8 @@
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 45px rgba(255, 182, 193, 0.15);
-    border-color: #f1b0b9;
+    box-shadow: 0 15px 45px rgba(244, 162, 172, 0.15);
+    border-color: #f4a2ac;
 }
 
 .service-icon {
@@ -64,7 +64,7 @@
     font-size: 14.5px;
     color: #3d2e31;
     font-weight: 400;
-    border-bottom: 1px solid rgba(255, 182, 193, 0.1);
+    border-bottom: 1px solid rgba(244, 162, 172, 0.1);
     padding-left: 20px;
     position: relative;
 }
@@ -73,7 +73,7 @@
     content: '•';
     position: absolute;
     left: 5px;
-    color: #f1b0b9;
+    color: #f4a2ac;
 }
 
 .service-list li:last-child {
@@ -82,7 +82,7 @@
 
 /* === CHAS Banner === */
 .chas-banner {
-    background: #f1b0b9;
+    background: #f4a2ac;
     color: white;
     padding: 20px;
     border-radius: 15px;
@@ -90,7 +90,7 @@
     font-size: 18px;
     font-weight: 500;
     margin: 40px 0;
-    box-shadow: 0 5px 20px rgba(255, 182, 193, 0.2);
+    box-shadow: 0 5px 20px rgba(244, 162, 172, 0.2);
 }
 
 /* === Health Screening Packages Grid === */
@@ -113,7 +113,7 @@
     background: white;
     border-radius: 20px;
     overflow: hidden;
-    border: 2px solid rgba(255, 182, 193, 0.1);
+    border: 2px solid rgba(244, 162, 172, 0.1);
 }
 
 .package-table table {
@@ -131,7 +131,7 @@
 
 .package-table td {
     padding: 12px 15px;
-    border-bottom: 1px solid rgba(255, 182, 193, 0.1);
+    border-bottom: 1px solid rgba(244, 162, 172, 0.1);
     color: #3d2e31;
     font-size: 14.5px;
     font-weight: 400;

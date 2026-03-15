@@ -78,7 +78,7 @@
   width: 48px;
   height: 48px;
   background: rgba(255, 255, 255, 0.92);
-  border: 2px solid rgba(255, 182, 193, 0.5);
+  border: 2px solid rgba(244, 162, 172, 0.5);
   border-radius: 50%;
   cursor: pointer;
   font-size: 28px;
@@ -94,11 +94,11 @@
 }
 
 .carousel-nav:hover {
-  background: rgba(241, 176, 185, 0.9);
+  background: rgba(244, 162, 172, 0.9);
   color: white;
-  border-color: #f1b0b9;
+  border-color: #f4a2ac;
   transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(241, 176, 185, 0.4);
+  box-shadow: 0 6px 20px rgba(244, 162, 172, 0.4);
 }
 
 /* Dots */
@@ -113,7 +113,7 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 182, 193, 0.5);
+  border: 2px solid rgba(244, 162, 172, 0.5);
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -121,14 +121,14 @@
 }
 
 .dot:hover {
-  border-color: #f1b0b9;
+  border-color: #f4a2ac;
   transform: scale(1.2);
 }
 
 .dot.active {
-  background: #f1b0b9;
-  border-color: #f1b0b9;
-  box-shadow: 0 0 10px rgba(241, 176, 185, 0.6);
+  background: #f4a2ac;
+  border-color: #f4a2ac;
+  box-shadow: 0 0 10px rgba(244, 162, 172, 0.6);
 }
 
 /* Counter */

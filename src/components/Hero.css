@@ -16,7 +16,7 @@
     left: -10%;
     width: 120%;
     height: 120%;
-    background: radial-gradient(ellipse at center, rgba(255, 182, 193, 0.15) 0%, rgba(255, 245, 248, 0.05) 50%, transparent 100%);
+    background: radial-gradient(ellipse at center, rgba(244, 162, 172, 0.15) 0%, rgba(255, 245, 248, 0.05) 50%, transparent 100%);
     pointer-events: none;
     z-index: -1;
     animation: parallaxBg 20s ease-in-out infinite;
@@ -97,13 +97,13 @@
 }
 
 .btn-secondary {
-    background: #f1b0b9;
+    background: #f4a2ac;
     color: white;
 }
 
 .btn-secondary:hover {
     background: #e5a0aa;
-    box-shadow: 0 8px 25px rgba(241, 176, 185, 0.4);
+    box-shadow: 0 8px 25px rgba(244, 162, 172, 0.4);
 }
 
 .hero-image {

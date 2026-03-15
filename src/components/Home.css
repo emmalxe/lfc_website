@@ -26,7 +26,7 @@
     overflow: hidden;
     box-shadow:
         0 24px 60px rgba(90, 40, 55, 0.14),
-        0 8px 20px rgba(255, 182, 193, 0.2);
+        0 8px 20px rgba(244, 162, 172, 0.2);
     transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
                 box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     display: flex;
@@ -38,12 +38,12 @@
     transform: translateY(-6px);
     box-shadow:
         0 32px 70px rgba(90, 40, 55, 0.18),
-        0 12px 28px rgba(255, 182, 193, 0.28);
+        0 12px 28px rgba(244, 162, 172, 0.28);
 }
 
 /* Solid pink header */
 .notice-card-header {
-    background: #f1b0b9;
+    background: #f4a2ac;
     padding: 22px 28px;
     display: flex;
     align-items: center;
@@ -97,7 +97,7 @@
 }
 
 .more-info-btn {
-    background: #f1b0b9;
+    background: #f4a2ac;
     color: white;
     border: none;
     padding: 12px 28px;
@@ -106,14 +106,14 @@
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+    box-shadow: 0 4px 15px rgba(244, 162, 172, 0.4);
     transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     white-space: nowrap;
 }
 
 .more-info-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(255, 182, 193, 0.55);
+    box-shadow: 0 8px 24px rgba(244, 162, 172, 0.55);
 }
 
 .more-info-btn:active {
@@ -128,7 +128,7 @@
     border: 2px solid rgba(255, 255, 255, 0.4);
     padding: 40px;
     border-radius: 28px;
-    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
+    box-shadow: 0 8px 25px rgba(244, 162, 172, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -143,8 +143,8 @@
 
 .telephone-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 45px rgba(241, 176, 185, 0.15);
-    border-color: #f1b0b9;
+    box-shadow: 0 15px 45px rgba(244, 162, 172, 0.15);
+    border-color: #f4a2ac;
 }
 
 .telephone-card .card-title {
@@ -170,7 +170,7 @@
 }
 
 .phone-placeholder:hover {
-    color: #f1b0b9;
+    color: #f4a2ac;
 }
 
 /* === Operating Hours Card (Full Width) === */
@@ -181,7 +181,7 @@
     border: 2px solid rgba(255, 255, 255, 0.4);
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.2);
+    box-shadow: 0 8px 25px rgba(244, 162, 172, 0.2);
     transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
                 box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
                 border-color 0.35s ease;
@@ -189,8 +189,8 @@
 
 .operating-hours-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 45px rgba(241, 176, 185, 0.15);
-    border-color: #f1b0b9;
+    box-shadow: 0 15px 45px rgba(244, 162, 172, 0.15);
+    border-color: #f4a2ac;
 }
 
 .operating-hours-card .card-title {
@@ -222,7 +222,7 @@
     padding: 35px;
     border-radius: 25px;
     text-align: center;
-    border: 2px solid rgba(255, 182, 193, 0.15);
+    border: 2px solid rgba(244, 162, 172, 0.15);
 }
 
 .hours-card h3 {
@@ -237,7 +237,7 @@
     padding: 15px;
     border-radius: 15px;
     margin: 10px 0;
-    box-shadow: 0 3px 15px rgba(255, 182, 193, 0.08);
+    box-shadow: 0 3px 15px rgba(244, 162, 172, 0.08);
 }
 
 .time-slot strong {
