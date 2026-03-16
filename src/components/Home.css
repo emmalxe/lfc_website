@@ -275,6 +275,7 @@
     }
 
     .section-header {
-        font-size: 28px;
+        font-size: 1.75rem;
+        margin-bottom: var(--space-md);
     }
 }

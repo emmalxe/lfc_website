@@ -99,11 +99,21 @@ body::before {
     .container {
         padding: 0 var(--space-sm);
     }
+    
+    .page-top-padding {
+        padding-top: calc(var(--space-2xl) + 20px);
+    }
 }
 
 /* === Section Utility === */
 .section {
     padding: var(--space-lg) 0;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: var(--space-md) 0;
+    }
 }
 
 .section-header {

@@ -182,4 +182,9 @@
         padding: 12px;
         font-size: 0.875rem;
     }
+
+    .section-header {
+        font-size: 1.75rem;
+        margin-bottom: var(--space-md);
+    }
 }
