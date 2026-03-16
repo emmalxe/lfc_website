@@ -1,79 +1,73 @@
 /* === Section Spacing === */
 .section {
-    margin-bottom: 80px;
+    padding: var(--space-xl) 0;
 }
 
 /* === Services Grid === */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 40px;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
 }
 
 .service-card {
-    background: linear-gradient(135deg, #fff9fb 0%, #fff5f8 100%);
-    padding: 30px;
-    border-radius: 20px;
-    border: 1px solid rgba(244, 162, 172, 0.1);
-    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                border-color 0.35s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 45px rgba(244, 162, 172, 0.15);
-    border-color: #f4a2ac;
+    background: var(--color-bg-secondary);
+    padding: var(--space-md);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(107, 142, 157, 0.08);
+    display: flex;
+    flex-direction: column;
 }
 
 .service-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, #ffe9f0 0%, #ffd9e6 100%);
+    background: var(--color-brand-muted);
     border-radius: 50%;
-    margin: 0 auto 20px;
+    margin: 0 auto var(--space-sm);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .service-icon svg {
-    width: 35px;
-    height: 35px;
-    stroke: #6b8e9d;
+    width: 32px;
+    height: 32px;
+    stroke: var(--color-brand-primary);
     stroke-width: 1.5;
 }
 
 .service-card h3 {
-    font-size: 18px;
-    font-weight: 500;
-    color: #6b8e9d;
-    margin-bottom: 15px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-brand-primary);
+    margin-bottom: var(--space-sm);
     text-align: center;
 }
 
 .service-list {
     list-style: none;
     text-align: left;
-    margin-top: 15px;
+    margin-top: var(--space-sm);
 }
 
 .service-list li {
-    padding: 8px 0;
-    font-size: 14.5px;
-    color: #3d2e31;
+    padding: 10px 0;
+    font-size: 0.9375rem;
+    color: var(--color-text-main);
     font-weight: 400;
-    border-bottom: 1px solid rgba(244, 162, 172, 0.1);
-    padding-left: 20px;
+    border-bottom: 1px solid rgba(107, 142, 157, 0.05);
+    padding-left: 24px;
     position: relative;
 }
 
 .service-list li:before {
     content: '•';
     position: absolute;
-    left: 5px;
-    color: #f4a2ac;
+    left: 4px;
+    color: var(--color-brand-secondary);
+    font-weight: 700;
 }
 
 .service-list li:last-child {
@@ -82,38 +76,39 @@
 
 /* === CHAS Banner === */
 .chas-banner {
-    background: #f4a2ac;
-    color: white;
-    padding: 20px;
-    border-radius: 15px;
+    background: var(--color-brand-secondary);
+    color: var(--color-text-on-brand);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
     text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    margin: 40px 0;
-    box-shadow: 0 5px 20px rgba(244, 162, 172, 0.2);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: var(--space-lg) 0;
+    box-shadow: var(--shadow-soft);
 }
 
 /* === Health Screening Packages Grid === */
 .screening-packages-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 40px;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
 }
 
 /* === Packages Grid === */
 .packages-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 40px;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
 }
 
 .package-table {
-    background: white;
-    border-radius: 20px;
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    border: 2px solid rgba(244, 162, 172, 0.1);
+    border: 1px solid rgba(107, 142, 157, 0.1);
+    box-shadow: var(--shadow-soft);
 }
 
 .package-table table {
@@ -122,51 +117,51 @@
 }
 
 .package-table th {
-    background: linear-gradient(135deg, #ffe9f0 0%, #ffd9e6 100%);
-    color: #6b8e9d;
-    padding: 15px;
-    font-weight: 500;
+    background: var(--color-brand-muted);
+    color: var(--color-brand-primary);
+    padding: 16px;
+    font-weight: 600;
     text-align: left;
 }
 
 .package-table td {
-    padding: 12px 15px;
-    border-bottom: 1px solid rgba(244, 162, 172, 0.1);
-    color: #3d2e31;
-    font-size: 14.5px;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(107, 142, 157, 0.05);
+    color: var(--color-text-main);
+    font-size: 0.9375rem;
     font-weight: 400;
 }
 
 .package-table tr:hover {
-    background: #fff9fb;
+    background: rgba(244, 162, 172, 0.03);
 }
 
 .package-table .price {
     text-align: right;
-    font-weight: 500;
-    color: #6b8e9d;
+    font-weight: 600;
+    color: var(--color-brand-primary);
 }
 
 .section-subtitle {
     text-align: center;
-    color: #5a4549;
-    font-size: 16px;
-    margin-bottom: 50px;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    margin-bottom: var(--space-lg);
     font-weight: 400;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* === Responsive Design === */
-@media (max-width: 900px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
+@media (max-width: 1024px) {
+    .services-grid, 
     .screening-packages-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .services-grid,
     .packages-grid,
     .screening-packages-grid {
@@ -174,17 +169,17 @@
     }
 
     .section {
-        margin-bottom: 50px;
+        padding: var(--space-lg) 0;
     }
 
     .chas-banner {
-        font-size: 15px;
-        padding: 16px;
+        font-size: 1rem;
+        padding: 14px;
     }
 
     .package-table th,
     .package-table td {
-        padding: 10px 12px;
-        font-size: 13px;
+        padding: 12px;
+        font-size: 0.875rem;
     }
 }

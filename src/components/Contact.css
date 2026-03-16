@@ -2,38 +2,38 @@
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 40px;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
 }
 
 .contact-info-card {
-    background: linear-gradient(135deg, #fff9fb 0%, #ffffff 100%);
-    padding: 35px;
-    border-radius: 25px;
-    border: 2px solid rgba(244, 162, 172, 0.15);
+    background: var(--color-bg-secondary);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(107, 142, 157, 0.1);
+    box-shadow: var(--shadow-soft);
 }
 
 .contact-info-card h3 {
-    font-size: 22px;
-    font-weight: 500;
-    color: #6b8e9d;
-    margin-bottom: 25px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-brand-primary);
+    margin-bottom: var(--space-md);
 }
 
 .contact-detail {
     display: flex;
     align-items: flex-start;
-    gap: 15px;
-    margin: 20px 0;
-    font-size: 15.5px;
-    color: #3d2e31;
-    font-weight: 400;
+    gap: var(--space-sm);
+    margin: var(--space-md) 0;
+    font-size: 1rem;
+    color: var(--color-text-main);
 }
 
 .contact-icon {
-    width: 45px;
-    height: 45px;
-    background: linear-gradient(135deg, #ffe9f0 0%, #ffd9e6 100%);
+    width: 48px;
+    height: 48px;
+    background: var(--color-brand-muted);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -44,43 +44,49 @@
 .contact-icon svg {
     width: 24px;
     height: 24px;
-    stroke: #6b8e9d;
+    stroke: var(--color-brand-primary);
     stroke-width: 1.5;
 }
 
 .contact-label {
     display: block;
-    color: #6b8e9d;
-    margin-bottom: 5px;
+    color: var(--color-brand-primary);
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
 }
 
 .contact-link {
-    color: #3d2e31;
+    color: var(--color-text-main);
     font-weight: 500;
     text-decoration: none;
+    transition: color var(--duration-fast) ease;
 }
 
 .contact-link:hover {
-    color: #6b8e9d;
+    color: var(--color-brand-secondary);
 }
 
 .contact-address {
-    color: #3d2e31;
+    color: var(--color-text-main);
     font-weight: 400;
+    line-height: 1.6;
 }
 
 .relocated-notice {
-    margin-top: 8px;
+    margin-top: 10px;
     color: #8B0000;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 0.9375rem;
 }
 
 .location-link {
     color: #8B0000;
     font-weight: 700;
     text-decoration: underline;
-    transition: color 0.3s ease;
+    transition: color var(--duration-fast) ease;
 }
 
 .location-link:hover {
@@ -89,76 +95,75 @@
 }
 
 .contact-hours {
-    color: #3d2e31;
+    color: var(--color-text-main);
     font-weight: 400;
+    line-height: 1.6;
 }
 
 .appointment-section {
     text-align: center;
-    margin-top: 30px;
-    padding-top: 25px;
-    border-top: 2px solid rgba(244, 162, 172, 0.15);
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid rgba(107, 142, 157, 0.1);
 }
 
 .btn-appointment {
     display: inline-block;
-    padding: 14px 35px;
-    background: #f4a2ac;
-    color: white;
+    padding: 14px 40px;
+    background: var(--color-brand-secondary);
+    color: var(--color-text-on-brand);
     text-decoration: none;
-    border-radius: 25px;
-    font-weight: 500;
-    font-size: 15px;
-    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    margin-top: 10px;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform var(--duration-fast) var(--ease-out),
+                box-shadow var(--duration-fast) var(--ease-out);
 }
 
 .btn-appointment:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(244, 162, 172, 0.4);
+    box-shadow: 0 8px 25px rgba(244, 162, 172, 0.3);
 }
 
 .appointment-note {
-    font-size: 13.5px;
+    font-size: 0.875rem;
     font-weight: 400;
-    color: #5a4549;
+    color: var(--color-text-muted);
     font-style: italic;
-    margin-top: 15px;
+    margin-top: var(--space-sm);
 }
 
 /* === Location Section === */
 .location-section {
-    margin-top: 40px;
+    margin-top: var(--space-xl);
 }
 
 .location-title {
-    font-size: 24px;
-    font-weight: 500;
-    color: #6b8e9d;
-    margin-bottom: 25px;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-brand-primary);
+    margin-bottom: var(--space-lg);
     text-align: center;
 }
 
 /* Info card — full width above the media grid */
 .location-info-card {
-    background: #f4a2ac;
-    border-radius: 20px;
-    padding: 26px 30px;
+    background: var(--color-brand-secondary);
+    border-radius: var(--radius-lg);
+    padding: 24px var(--space-md);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    box-shadow: 0 8px 25px rgba(244, 162, 172, 0.3);
-    border: 2px solid rgba(255, 255, 255, 0.15);
-    margin-bottom: 20px;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: var(--space-md);
 }
 
 .location-info-text {
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.65;
+    color: var(--color-text-on-brand);
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.6;
     margin: 0;
 }
 
@@ -166,14 +171,14 @@
 .location-media-grid {
     display: grid;
     grid-template-columns: 1fr 1.6fr;
-    gap: 20px;
+    gap: var(--space-md);
     align-items: stretch;
 }
 
 .location-video-container {
-    border-radius: 20px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(244, 162, 172, 0.15);
+    box-shadow: var(--shadow-soft);
     background: #1a1a1a;
 }
 
@@ -185,9 +190,9 @@
 }
 
 .location-image-container {
-    border-radius: 20px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(244, 162, 172, 0.15);
+    box-shadow: var(--shadow-soft);
 }
 
 .location-image {
@@ -198,37 +203,34 @@
 }
 
 /* === Responsive Design === */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .contact-info-card {
-        padding: 26px 20px;
+        gap: var(--space-md);
     }
 
     .location-media-grid {
         grid-template-columns: 1fr;
-        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-info-card {
+        padding: var(--space-md);
     }
 
     .location-video-container,
     .location-image-container {
-        min-height: 240px;
-    }
-
-    .location-info-card {
-        padding: 22px 18px;
+        min-height: 280px;
     }
 
     .location-info-text {
-        font-size: 14px;
+        font-size: 1rem;
     }
 
     .btn-appointment {
-        padding: 13px 28px;
-        font-size: 14px;
+        padding: 13px 32px;
+        font-size: 0.9375rem;
     }
 }
 

@@ -15,7 +15,7 @@ const Home = ({ setActiveTab }) => {
         {/* Top Row Cards */}
         <div className="top-cards">
           {/* Important Notice Card - Pink */}
-          <AnimatedSection animation="fade-up" delay={100}>
+          <AnimatedSection animation="none" delay={0}>
             <div className="important-notice-card">
               <div className="notice-card-header">
                 <div className="notice-card-icon">
@@ -41,7 +41,7 @@ const Home = ({ setActiveTab }) => {
           </AnimatedSection>
 
           {/* Telephone Enquiries Card - Light Grey */}
-          <AnimatedSection animation="fade-up" delay={150}>
+          <AnimatedSection animation="none" delay={0}>
             <div className="telephone-card">
               <h2 className="card-title">Telephone Enquiries</h2>
               <div className="phone-number">
@@ -52,7 +52,7 @@ const Home = ({ setActiveTab }) => {
         </div>
 
         {/* Operating Hours Card - Full Width Bottom */}
-        <AnimatedSection animation="fade-up" delay={200}>
+        <AnimatedSection animation="none" delay={0}>
           <div className="operating-hours-card">
             <h2 className="card-title">Operating Hours</h2>
             

@@ -4,7 +4,7 @@ import './Contact.css';
 
 const Contact = () => {
   return (
-    <div className="container" style={{ paddingTop: '100px' }}>
+    <div className="container page-top-padding">
       <AnimatedSection animation="fade-up" delay={100}>
         <section className="section" id="contacts">
         <h3 className="section-header">Contacts</h3>

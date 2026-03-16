@@ -3,28 +3,28 @@
     display: block;
     width: auto;
     height: auto;
-    max-height: 580px;       /* matches carousel max-height */
+    max-height: 580px;
     max-width: 100%;
-    margin: 30px auto 40px;
-    border-radius: 18px;     /* matches carousel-image border-radius */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    margin: var(--space-md) auto var(--space-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
     object-fit: contain;
 }
 
 /* === About Content === */
 .about-content {
-    padding: 20px 0 30px 0;
-    max-width: 860px;        /* matches carousel max-width */
+    padding: var(--space-sm) 0 var(--space-md) 0;
+    max-width: 860px;
     margin: 0 auto;
 }
 
 .about-text {
-    font-size: 16px;
-    color: #3d2e31;
+    font-size: var(--font-size-p);
+    color: var(--color-text-main);
     font-weight: 400;
     line-height: 1.9;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: var(--space-sm);
 }
 
 /* === Expectations Section === */
@@ -34,23 +34,23 @@
 }
 
 .expectations-section {
-    margin-bottom: 40px;
+    margin-bottom: var(--space-lg);
 }
 
 .expectations-title {
-    font-size: 22px;
-    font-weight: 500;
-    color: #6b8e9d;
-    margin-bottom: 20px;
-    padding-left: 20px;
-    border-left: 4px solid #f4a2ac;
+    font-size: 1.375rem; /* 22px */
+    font-weight: 600;
+    color: var(--color-brand-primary);
+    margin-bottom: var(--space-sm);
+    padding-left: var(--space-sm);
+    border-left: 4px solid var(--color-brand-secondary);
 }
 
 .expectations-intro {
-    color: #3d2e31;
-    font-size: 15px;
+    color: var(--color-text-muted);
+    font-size: 0.9375rem; /* 15px */
     font-weight: 400;
-    margin-bottom: 20px;
+    margin-bottom: var(--space-sm);
     font-style: italic;
 }
 
@@ -60,49 +60,50 @@
 }
 
 .expectations-list li {
-    padding: 12px 20px;
-    margin: 8px 0;
-    background: linear-gradient(135deg, #fff9fb 0%, #fff5f8 100%);
-    border-radius: 12px;
-    color: #3d2e31;
-    font-size: 15px;
+    padding: 14px 20px;
+    margin: 10px 0;
+    background: var(--color-bg-secondary);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(244, 162, 172, 0.1);
+    color: var(--color-text-main);
+    font-size: 0.9375rem;
     font-weight: 400;
     position: relative;
-    padding-left: 45px;
+    padding-left: 48px;
 }
 
 .expectations-list li::before {
     content: '•';
     position: absolute;
     left: 20px;
-    color: #f4a2ac;
-    font-weight: 500;
+    color: var(--color-brand-secondary);
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 /* === Responsive Design === */
 @media (max-width: 768px) {
     .about-text {
-        font-size: 14.5px;
+        font-size: 1rem;
     }
 
     .beginning-image {
         max-height: 420px;
-        border-radius: 14px;
+        border-radius: var(--radius-md);
     }
 
     .expectations-title {
-        font-size: 19px;
+        font-size: 1.25rem;
     }
 
     .expectations-list li {
-        font-size: 14px;
-        padding: 10px 16px 10px 40px;
+        font-size: 0.875rem;
+        padding: 12px 16px 12px 42px;
     }
 }
 
 @media (max-width: 480px) {
     .beginning-image {
         max-height: 320px;
-        border-radius: 12px;
     }
 }

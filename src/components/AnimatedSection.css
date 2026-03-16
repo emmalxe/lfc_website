@@ -65,3 +65,10 @@
 .animated-section.slide-up.visible {
   transform: translateY(0);
 }
+
+/* None Animation */
+.animated-section.none {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
