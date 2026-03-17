@@ -13,6 +13,23 @@ const imageFiles = files.filter(file => {
   return ['.jpg', '.jpeg', '.png', '.webp'].includes(ext);
 });
 
+// Sort with preferred order
+const preferredOrder = [
+  "We care for all template drawing new mural 3.jpeg",
+  "old_clinic_photo.jpg",
+  "new_container.jpeg"
+];
+
+imageFiles.sort((a, b) => {
+  const indexA = preferredOrder.indexOf(a);
+  const indexB = preferredOrder.indexOf(b);
+  
+  if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+  if (indexA !== -1) return -1;
+  if (indexB !== -1) return 1;
+  return a.localeCompare(b);
+});
+
 // Generate the JavaScript code
 const jsCode = `// Auto-generated file - do not edit manually
 // Run 'npm run generate-images' to regenerate this file
@@ -20,8 +37,9 @@ const jsCode = `// Auto-generated file - do not edit manually
 export const getJourneyImages = () => {
   const imageFiles = ${JSON.stringify(imageFiles, null, 2)};
   
+  const base = import.meta.env.BASE_URL;
   return imageFiles.map(filename => 
-    \`/references/journey pictures/\${filename}\`
+    \`\${base}references/journey pictures/\${filename}\`
   );
 };
 
@@ -35,4 +53,3 @@ fs.writeFileSync(outputFile, jsCode);
 
 console.log(`Generated ${imageFiles.length} image paths in ${outputFile}`);
 console.log('Images:', imageFiles);
-
