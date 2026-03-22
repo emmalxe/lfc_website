@@ -25,7 +25,7 @@ const Services = () => {
 
   return (
     <div className="container page-top-padding">
-      <AnimatedSection animation="none" delay={0}>
+      <AnimatedSection animation="fade-up" delay={0}>
         <section className="section" id="our-services">
         <h2 className="section-header">Our Services</h2>
         <p className="section-subtitle">✓ CHAS/PHPC/HEALTHIER SG Clinic</p>
@@ -144,7 +144,7 @@ const Services = () => {
         </section>
       </AnimatedSection>
 
-      <AnimatedSection animation="none" delay={0}>
+      <AnimatedSection animation="fade-up" delay={0}>
         <section className="section" id="vaccination-packages">
         <h2 className="section-header">Vaccination</h2>
 
@@ -196,7 +196,7 @@ const Services = () => {
         </section>
       </AnimatedSection>
 
-      <AnimatedSection animation="none" delay={0}>
+      <AnimatedSection animation="fade-up" delay={0}>
         <section className="section" id="health-screening">
           <h2 className="section-header">Health Screening Packages</h2>
           

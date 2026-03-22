@@ -18,7 +18,7 @@ const AnimatedSection = ({
     <div
       ref={ref}
       className={`animated-section ${animation} ${isVisible ? 'visible' : ''} ${className}`}
-      style={{ animationDelay: `${delay}ms` }}
+      style={{ transitionDelay: isVisible ? `${delay}ms` : '0ms' }}
     >
       {children}
     </div>

@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div className="container page-top-padding">
       <div id="our-story">
-      <AnimatedSection animation="none" delay={0}>
+      <AnimatedSection animation="fade-up" delay={0}>
         <section className="section">
           <h2 className="section-header">In The Beginning</h2>
           <img 
@@ -27,7 +27,7 @@ const About = () => {
         </section>
       </AnimatedSection>
 
-      <AnimatedSection animation="none" delay={0}>
+      <AnimatedSection animation="fade-up" delay={0}>
         <section className="section">
         <h2 className="section-header">It's the journey that matters...</h2>
         <ThreeDPhotoCarouselDemo />
@@ -41,7 +41,7 @@ const About = () => {
       </AnimatedSection>
       </div>
 
-      <AnimatedSection animation="none" delay={0}>
+      <AnimatedSection animation="fade-up" delay={0}>
         <section className="section" id="expectations">
           <h2 className="section-header">Expectations</h2>
         

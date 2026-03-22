@@ -1,4 +1,5 @@
 User-agent: *
+Disallow: /index.aspx
 Allow: /
 
 Sitemap: https://leefamilyclinic.com.sg/sitemap.xml
