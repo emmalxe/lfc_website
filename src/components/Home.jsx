@@ -1,14 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hero from './Hero';
 import RollingGallery from './RollingGallery';
 import AnimatedSection from './AnimatedSection';
 import './Home.css';
 
-const Home = ({ setActiveTab }) => {
+const Home = () => {
 
   return (
     <div className="container">
-      <Hero setActiveTab={setActiveTab} />
+      <Hero />
       
       {/* New Card Layout */}
       <div className="cards-layout" id="important-notice">
@@ -33,9 +34,9 @@ const Home = ({ setActiveTab }) => {
                 </p>
               </div>
               <div className="notice-card-footer">
-                <button className="more-info-btn" onClick={() => setActiveTab('contact')}>
+                <Link to="/contact" className="more-info-btn">
                   Click here for more information
-                </button>
+                </Link>
               </div>
             </div>
           </AnimatedSection>

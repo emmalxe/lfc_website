@@ -1,51 +1,67 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = ({ activeTab, setActiveTab }) => {
+const Navbar = () => {
   const [highlightStyle, setHighlightStyle] = useState({});
   const [openDropdown, setOpenDropdown] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navLinksRef = useRef([]);
   const containerRef = useRef(null);
   const closeTimeoutRef = useRef(null);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const getActiveTab = () => {
+    const path = location.pathname;
+    if (path === '/about') return 'about';
+    if (path === '/services') return 'services';
+    if (path === '/contact') return 'contact';
+    return 'home';
+  };
+
+  const activeTab = getActiveTab();
 
   const navMenu = [
     {
       id: 'home',
       label: 'Home',
+      path: '/',
       dropdown: [
-        { label: 'Important Notice', page: 'home', section: 'important-notice' }
+        { label: 'Important Notice', path: '/', section: 'important-notice' }
       ]
     },
     {
       id: 'about',
       label: 'About Us',
+      path: '/about',
       dropdown: [
-        { label: 'Our Story', page: 'about', section: 'our-story' },
-        { label: 'Our Expectations', page: 'about', section: 'expectations' }
+        { label: 'Our Story', path: '/about', section: 'our-story' },
+        { label: 'Our Expectations', path: '/about', section: 'expectations' }
       ]
     },
     {
       id: 'services',
       label: 'Services',
+      path: '/services',
       dropdown: [
-        { label: 'Our Services', page: 'services', section: 'our-services' },
-        { label: 'Vaccination Packages', page: 'services', section: 'vaccination-packages' },
-        { label: 'Health Screening Packages', page: 'services', section: 'health-screening' }
+        { label: 'Our Services', path: '/services', section: 'our-services' },
+        { label: 'Vaccination Packages', path: '/services', section: 'vaccination-packages' },
+        { label: 'Health Screening Packages', path: '/services', section: 'health-screening' }
       ]
     },
     {
       id: 'contact',
       label: 'Contact Us',
+      path: '/contact',
       dropdown: [
-        { label: 'Contacts', page: 'contact', section: 'contacts' },
-        { label: 'Location Updates', page: 'contact', section: 'location-updates' }
+        { label: 'Contacts', path: '/contact', section: 'contacts' },
+        { label: 'Location Updates', path: '/contact', section: 'location-updates' }
       ]
     }
   ];
 
-  const handleNavClick = (page) => {
-    setActiveTab(page);
+  const handleNavClick = () => {
     setOpenDropdown(null);
     setMobileMenuOpen(false);
     if (closeTimeoutRef.current) {
@@ -81,10 +97,10 @@ const Navbar = ({ activeTab, setActiveTab }) => {
     }, 100);
   };
 
-  const handleDropdownItemClick = (page, section) => {
-    setActiveTab(page);
+  const handleDropdownItemClick = (path, section) => {
     setOpenDropdown(null);
     setMobileMenuOpen(false);
+    navigate(path);
     scrollToSection(section);
   };
 
@@ -184,14 +200,14 @@ const Navbar = ({ activeTab, setActiveTab }) => {
               onMouseEnter={() => handleDropdownOpen(item.id, index)}
               onMouseLeave={handleDropdownClose}
             >
-              <a
+              <Link
                 ref={el => navLinksRef.current[index] = el}
-                href="#"
+                to={item.path}
                 className={`nav-link ${activeTab === item.id ? 'active' : ''}`}
-                onClick={(e) => { e.preventDefault(); handleNavClick(item.id); }}
+                onClick={handleNavClick}
               >
                 {item.label}
-              </a>
+              </Link>
               {openDropdown === item.id && (
                 <div
                   className="dropdown-menu"
@@ -210,7 +226,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
                       className="dropdown-item"
                       onClick={(e) => {
                         e.preventDefault();
-                        handleDropdownItemClick(dropdownItem.page, dropdownItem.section);
+                        handleDropdownItemClick(dropdownItem.path, dropdownItem.section);
                       }}
                     >
                       {dropdownItem.label}
@@ -240,13 +256,13 @@ const Navbar = ({ activeTab, setActiveTab }) => {
         <div className="mobile-menu">
           {navMenu.map((item) => (
             <div key={item.id} className="mobile-menu-group">
-              <a
-                href="#"
+              <Link
+                to={item.path}
                 className={`mobile-nav-link ${activeTab === item.id ? 'active' : ''}`}
-                onClick={(e) => { e.preventDefault(); handleNavClick(item.id); }}
+                onClick={handleNavClick}
               >
                 {item.label}
-              </a>
+              </Link>
               <div className="mobile-dropdown">
                 {item.dropdown.map((dropdownItem, idx) => (
                   <a
@@ -255,7 +271,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
                     className="mobile-dropdown-item"
                     onClick={(e) => {
                       e.preventDefault();
-                      handleDropdownItemClick(dropdownItem.page, dropdownItem.section);
+                      handleDropdownItemClick(dropdownItem.path, dropdownItem.section);
                     }}
                   >
                     {dropdownItem.label}

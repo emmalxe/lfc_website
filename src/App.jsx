@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
@@ -9,36 +10,27 @@ import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('home');
-
-  const renderPage = () => {
-    switch (activeTab) {
-      case 'home':
-        return <Home setActiveTab={setActiveTab} />;
-      case 'about':
-        return <About />;
-      case 'services':
-        return <Services />;
-      case 'contact':
-        return <Contact />;
-      default:
-        return <Home setActiveTab={setActiveTab} />;
-    }
-  };
-
   return (
-    <div className="App">
-      <AnnouncementModal />
-      <ScrollToTop />
-      <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
-      <main>
-        {renderPage()}
-      </main>
-      <footer>
-        <p>&copy; 2025 Lee Family Clinic Pte Ltd. All rights reserved.</p>
-        <p>Big or Small, We Care for All!</p>
-      </footer>
-    </div>
+    <HashRouter>
+      <div className="App">
+        <AnnouncementModal />
+        <ScrollToTop />
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
+        <footer>
+          <p>&copy; 2025 Lee Family Clinic Pte Ltd. All rights reserved.</p>
+          <p>Big or Small, We Care for All!</p>
+        </footer>
+      </div>
+    </HashRouter>
   );
 }
 

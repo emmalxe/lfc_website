@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import GradientText from './GradientText';
 import './Hero.css';
 
-const Hero = ({ setActiveTab }) => {
+const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-content">
@@ -19,7 +20,7 @@ const Hero = ({ setActiveTab }) => {
         <p className="hero-subheading">Trusted family healthcare with compassion and expertise.</p>
         <div className="cta-buttons">
           <a href="https://book.health.gov.sg/offerings/99/institutions/553/timeslots" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book Appointment</a>
-          <a href="#" className="btn btn-secondary" onClick={(e) => { e.preventDefault(); setActiveTab('contact'); }}>Get Started Today</a>
+          <Link to="/contact" className="btn btn-secondary">Get Started Today</Link>
         </div>
       </div>
       <div className="hero-image">
